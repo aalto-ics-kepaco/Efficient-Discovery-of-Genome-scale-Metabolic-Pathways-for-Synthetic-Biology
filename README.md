@@ -13,4 +13,19 @@ pathways with several biological constraints. Out methods is feasible for genome
 
   This file
  
- *
+* kOPt 
+ 
+* kOptResults
+
+* EFMs
+
+* EFMsResults
+
+* data
+
+* figures
+
+* calculateVariation 
+
+* supplementaryScripts
+
