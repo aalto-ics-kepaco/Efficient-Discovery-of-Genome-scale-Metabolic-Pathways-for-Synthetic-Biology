@@ -14,14 +14,21 @@ pathways with several biological constraints. Out methods is feasible for genome
   This file
  
 * kOPt 
+
+  This folder contains the MATLAB implementation of the kOPt method. Two versions of the code ara available, with the difference that one uses [cplex](http://www-03.ibm.com/software/products/en/ibmilogcpleoptistud) for the optimization process and the second one can be used with [GLPK](https://www.gnu.org/software/glpk/) optimization software. 
  
 * kOptResults
+
+  The results
 
 * EFMs
 
 * EFMsResults
 
 * data
+
+ The data folder stores the stoichiometric (S) matrices representing the metabolic networks that we have used in the project. The S matrices are organized such that the rows represent metabolites, and the columns correspond to reactions in the network. 
+
 
 * figures
 
