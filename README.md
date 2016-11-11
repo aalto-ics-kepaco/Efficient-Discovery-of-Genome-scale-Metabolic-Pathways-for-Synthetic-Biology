@@ -19,9 +19,11 @@ pathways with several biological constraints. Out methods is feasible for genome
  
 * kOptResults
 
-  The results
+  The results for each of the networks is stored in a separate mat file. The structure contains the optimization Objective values, running times, flux solutions and binary values of the flux solutions for optimization round. 
 
 * EFMs
+
+  The results for the enumeration of EFMs method. The running times and obtained EFMs for each network are saved in separate files.  
 
 * EFMsResults
 
@@ -31,8 +33,14 @@ pathways with several biological constraints. Out methods is feasible for genome
 
 
 * figures
+  
+  Matlab code for generation of the figures, and figures in different formats.
 
 * calculateVariation 
 
+  Scripts for calculation of the variability of the obtained solutions.
+
 * supplementaryScripts
+ 
+  Additional scripts required either for the methods or for the figure generation.
 
