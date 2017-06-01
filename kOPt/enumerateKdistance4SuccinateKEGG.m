@@ -5,6 +5,9 @@ function  enumerateKdistance4SuccinateKEGG(struct)
 addpath('/scratch/work/ilievsm1/ibm/cplex/matlab/x86-64_linux/');
 addpath('/scratch/work/ilievsm1/ibm/cplex/examples/src/matlab/');
 
+%add to the path all folders and subfolders in the repository 
+addpath(genpath('../');
+
 network=load(strcat(struct,'.mat'));
 name=fieldnames(network);
 inputstruct=network.(name{1});
