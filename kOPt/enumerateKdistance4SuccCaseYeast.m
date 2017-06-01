@@ -1,8 +1,6 @@
 function  enumerateKdistance4SuccCaseYeast(struct)
 %enumerate the first K flux solutions, distance 4 from product 
 
-%addpath('/scratch/work/ilievsm1/ibm/cplex/matlab/x86-64_linux/');
-%addpath('/scratch/work/ilievsm1/ibm/cplex/examples/src/matlab/');
 
 %%load('succinate.mat');
 %load('majanetworks.mat',product);
