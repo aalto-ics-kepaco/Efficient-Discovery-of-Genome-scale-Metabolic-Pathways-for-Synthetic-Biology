@@ -3,9 +3,11 @@
 
 Implementation of the computational method kOpt, corresponding to the manuscript  "Efficient Discovery of Genome-scale Metabolic Pathways for Synthetic Biology", that has been submitted to Bionformatics journal.
 
-Abstract
+
+**Abstract**
 Motivation: Genome-scale metabolic networks and metabolic networks extended by new-to-nature reactions exceed the practical size of enumerating elementary flux modes, yet such enumeration is required to take advantage of the networks.
 Results: A novel method, called kOpt, was developed and implemented to compute the first k flux solutions having increased flux pattern variability for reactions close to the product in the stoichiometric reaction network. The novel method proved feasible for genome-scale metabolic networks and compared favourably to a method enumerating the first k elementary flux modes. More specifically, the proposed method was approximately two orders of magnitude faster and yielded a more varied set of solutions.
+
 
 
 **Contents**
