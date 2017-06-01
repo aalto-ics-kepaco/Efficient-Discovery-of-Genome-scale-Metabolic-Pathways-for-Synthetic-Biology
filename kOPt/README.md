@@ -8,4 +8,8 @@ enumerateKdistance4GLPK.m - to be used with GLPK optimization software.
 
 1) enumerateKdistance4SuccinateKEGG.m
 2) enumerateKdistance4SuccinateYeast.m, both to be used with CPLEX. 
+Due to some minor differences in representation of the structures, 1) and 2) are used depending on wherther the yeast network or KEGG subnetworks are required.
+
+
+
 
