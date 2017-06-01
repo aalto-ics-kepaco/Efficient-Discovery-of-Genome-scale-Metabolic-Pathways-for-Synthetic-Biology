@@ -1,4 +1,4 @@
-function  enumerateKdistance4SuccinateCaseTriton(struct)
+function  enumerateKdistance4SuccinateKEGG(struct)
 %enumerate the first K flux solutions,  distance 4 from product 
 
 %addpath('/scratch/work/ilievsm1/ibm/cplex/matlab/x86-64_linux/');
