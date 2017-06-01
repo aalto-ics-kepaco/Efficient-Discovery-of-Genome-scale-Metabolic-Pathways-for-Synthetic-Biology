@@ -1,7 +1,7 @@
 # Metabolic-Pathways-Identification
 
 
-Implementation of the computational method kOpt, corresponding to the manuscript  "Efficient Discovery of Genome-scale Metabolic Pathways for Synthetic Biology", that has been submitted to Bionformatics journal.
+Implementation of the computational method kOpt, corresponding to the manuscript "Efficient Discovery of Genome-scale Metabolic Pathways for Synthetic Biology".
 
 
 **Abstract**
@@ -21,7 +21,7 @@ Results: A novel method, called kOpt, was developed and implemented to compute t
 * kOPt 
 
   This folder contains the MATLAB implementation of the kOPt method. Two versions of the code ara available, with the difference that one uses [cplex](http://www-03.ibm.com/software/products/en/ibmilogcpleoptistud) for the optimization process and the second one can be used with [GLPK](https://www.gnu.org/software/glpk/) optimization software. 
- 
+  
 * kOptResults
 
   The results for each of the networks is stored in a separate mat file. The structure contains the optimization Objective values, running times, flux solutions and binary values of the flux solutions for optimization round. 
