@@ -1,4 +1,4 @@
-# Metabolic-Pathways-Identification
+# Efficient Discovery of Genome-scale Metabolic Pathways for Synthetic Biology
 
 
 Implementation of the computational method kOpt, corresponding to the manuscript "Efficient Discovery of Genome-scale Metabolic Pathways for Synthetic Biology".
