@@ -25,7 +25,7 @@ react_mat(:,directions<0)=-1*react_mat(:,directions<0);
 directions(directions<0)=1;
 
 %read the constraint types
-%for the yeast net
+
 constr=outputstruct.compoundClassification;
 
 constraints=cell((size(constr)));
