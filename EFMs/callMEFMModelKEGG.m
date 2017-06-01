@@ -7,14 +7,12 @@ function  callMEFMModelTriton(struct)
 % place the file majanetworks.mat in the same working directory, or include
 % the path
 
-addpath('/scratch/work/ilievsm1/ibm/cplex/matlab/x86-64_linux/');
-addpath('/scratch/work/ilievsm1/ibm/cplex/examples/src/matlab/');
+%add the path to the cplex software and matlab lib
+% add to the path all folders and subfolders 
+%addpath('/scratch/work/ilievsm1/ibm/cplex/matlab/x86-64_linux/');
+%addpath('/scratch/work/ilievsm1/ibm/cplex/examples/src/matlab/');
 
-%load('succinate.mat');
-%load('majanetworks.mat')
-%network=load('allnetworks.mat',product)
-%product_name=fieldnames(network);
-%struct=network.(product_name{1});
+
 network=load(strcat(struct,'.mat'));
 name=fieldnames(network);
 inputstruct=network.(name{1});
@@ -139,19 +137,5 @@ for i=1:size(directions,1)
 end
 save(strcat(struct,'allKEFMS.mat'),'allKEFMS');
 save(strcat(struct,'allVorigSize.mat'),'allVorigSize');
-%modify to present only the reactions within distance 4 from product 
-%activePositionsTop20=find(sum(abs(allVorigSize)));
-
-%no cofactors distance from product 
-% distanceProduct=struct.rxndists;
-% distanceProductExchange=100*ones(size(react_mat,2),1);
-% nonExchangeReactions= struct.rxnClassification~=-2;
-% distanceProductExchange(nonExchangeReactions)=distanceProduct;
-% 
-% activeDist4=intersect(find(distanceProductExchange<=4),activePositionsTop20);
-% activeDistances=[distanceProductExchange(activeDist4)'; (allVorigSize(:,activeDist4))];
-% activeReactions=struct.listofKEGGRID(activeDist4);
-% [a,b]=sortrows(activeDistances',1);
-% activeDistances=a'; activeReactions=activeReactions(b);
 save(strcat(struct,'running_time.mat'),'running_times');
 end
