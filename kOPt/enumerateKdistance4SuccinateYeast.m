@@ -1,4 +1,4 @@
-function  enumerateKdistance4SuccCaseYeast(struct)
+function  enumerateKdistance4SuccinateYeast(struct)
 %enumerate the first K flux solutions, distance 4 from product 
 
 
