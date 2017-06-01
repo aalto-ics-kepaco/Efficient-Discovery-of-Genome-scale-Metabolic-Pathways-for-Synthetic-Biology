@@ -2,12 +2,6 @@ function  enumerateKdistance4SuccinateYeast(struct)
 %enumerate the first K flux solutions, distance 4 from product 
 
 
-%%load('succinate.mat');
-%load('majanetworks.mat',product);
-%network=load('allnetworks.mat',product)
-%product_name=fieldnames(network);
-%struct=network.(product_name{1});
-
 % add path to cplex matlab libraries 
 addpath('/scratch/work/ilievsm1/ibm/cplex/matlab/x86-64_linux/');
 addpath('/scratch/work/ilievsm1/ibm/cplex/examples/src/matlab/');
@@ -31,11 +25,8 @@ react_mat(:,directions<0)=-1*react_mat(:,directions<0);
 directions(directions<0)=1;
 rkeep=find((outputstruct.rxnClassification==0));
 
-%read in constraints (not for yeast net)
-%constr=outputstruct.shadowClassification;
-%constr(outputstruct.shadowClassification==-2)=[];
+%read in constraints
 
-%for the yeast net
 constr=outputstruct.compoundClassification;
 
 constraints=cell((size(constr)));
@@ -81,13 +72,6 @@ beq=zeros(1,size(Aeq,1));
 %sum of substrates
 sum_s=zeros(1,size(react_mat,2));
 for i=1:size(react_mat,1)
-
-   % if (ismember(cellstr('cofactor'),constraints(i)))
-    %    A(k,:)=[-1*react_mat(i,:) zeros(1,columns) zeros(1,columns)];
-     %   b(k)=20;
-      %  k=k+1;
-       
-    %end
     
     if (ismember(cellstr('substrate'),constraints(i)))
         A(k,:)=[react_mat(i,:) zeros(1,columns) zeros(1,columns)];
@@ -206,22 +190,3 @@ for i=1:size(directions,1)
 end
 %time=toc;
 save(strcat(struct,'Results'),'running_times','Solutions','Objectives','SolutionsBinary');
-%save('succinatenoCofactorsAbs','time','Solutions','Objectives');
-%save('glycolatenoCofactorsAbs','time','Solutions','Objectives');
-%change react_mat directions 
-
-%post-processing, presenting the results
-%top50Solutions=Solutions(1:50,:);
-%activePositionsTop20=find(sum(abs(top50Solutions)));
-
-%change between SR and CR
-%activeDist4=intersect(find(distanceProduct<=4),activePositionsTop20);
-%activeDist4=intersect(find(distanceProduct<=4),activePositionsTop20);
-%activeDistances=[distanceProduct(activeDist4)' ; int8(top20Solutions(:,activeDist4))];
-%activeDistances=[distanceProductExchange(activeDist4)' ; (top50Solutions(:,activeDist4))];
-%activeReactions=reactionIDs(activeDist4);
-
-%[a,b]=sortrows(activeDistances',1);
-%activeDistances=a'; activeReactions=activeReactions(b);
-%save(strcat(inputstruct,'activeReactions'),'activeDistances','activeReactions');
-%net=react_mat*top20Solutions';
